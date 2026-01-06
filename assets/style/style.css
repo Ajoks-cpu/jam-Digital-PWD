@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    position: relative;
+}
+
+.container-timer {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.timer-box {
+    display: inline-block;
+    background: rgba(20, 20, 20, 0.7);
+    padding: 30px 60px;
+    border-radius: 20px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    min-width: 380px;
+    transition: all 0.3s ease;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #ffcccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.time {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 0 20px #ff0000;
+    margin: 10px 0;
+}
+
+
+.ampm {
+    font-size: 1.2rem;
+    color: #ff3333;
+    font-weight: bold;
+    margin-left: 10px;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.7);
+}
+
+.date {
+    font-size: 1rem;
+    color: #bfbfbf;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 8px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #ff0000;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+.team-container {
+    background-color: #050505;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 0 10px rgba(255, 0, 0, 0.2);
+    color: white;
+}
+
+.title-team {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #ff0000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.member-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+    border-color: #ff0000;
+    cursor: pointer;
+}
+
+.member-name {
+    margin-top: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.member-id {
+    font-size: 0.85em;
+    color: #cccccc;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        padding-bottom: 50px;
+    }
+
+    .container-timer {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0 15px;
+    }
+
+    .timer-box {
+        min-width: auto;
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .time {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .greeting {
+        letter-spacing: 1px;
+    }
+
+    .team-container {
+        padding: 20px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .team-member {
+        gap: 20px;
+    }
+
+    .member {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .member-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title-team {
+        font-size: 1.4em;
+    }
+
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .time {
+        font-size: 2.2rem;
+    }
+
+    .member-photo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    /* background-color: aqua; */
+}
